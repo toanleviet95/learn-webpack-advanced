@@ -1,0 +1,55 @@
+{
+  "name": "react-sample-with-typescript",
+  "version": "2.0.0",
+  "description": "React sample with Typescript",
+  "scripts": {
+    "start": "webpack-dev-server --open --config ./webpack/webpack.dev.ts",
+    "build": "webpack --config ./webpack/webpack.prod.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json",
+    "lint:style": "stylelint ./src/*",
+    "lint": "tslint src && npm run lint:style",
+    "lint:fix": "tslint --fix src && npm run lint:style",
+    "lint-staged": "lint-staged",
+    "lint-staged:ts": "tslint",
+    "prettier": "prettier --write ./src/*"
+  },
+  "author": "toanleviet95@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.2.0",
+    "webpack": "^4.29.4",
+    "webpack-merge": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "cross-env": "^5.1.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.2.0",
+    "prettier": "1.14.3",
+    "react-hot-loader": "^4.6.5",
+    "stylelint": "^9.4.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "^18.0.0",
+    "ts-loader": "^6.2.1",
+    "tslint": "^6.0.0",
+    "typescript": "^4.1.0",
+    "webpack-bundle-analyzer": "^4.4.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": "git add",
+    "**/*.{js,jsx,tsx,ts}": "yarn lint-staged:ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  }
+}
