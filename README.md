@@ -1,6 +1,4 @@
-# React sample code with Typescript
-[![Build Status][build-badge]][build]
-### This is my React starter kit in some projects
+# Learn Webpack Advanced
 
 <div align="center">
   <img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" width="10%" />
@@ -41,7 +39,6 @@ npm run build // or yarn build
 [reactjs@17]: https://github.com/facebook/react/blob/master/CHANGELOG.md
 [webpack]: https://webpack.js.org
 [react-hot-loader]: https://github.com/gaearon/react-hot-loader
-[build-badge]: https://travis-ci.com/toanleviet95/react-sample-with-webpack.svg?branch=master
 [tslint]: https://palantir.github.io/tslint
 [stylelint]: https://stylelint.io
 [travis-ci]: https://travis-ci.org
