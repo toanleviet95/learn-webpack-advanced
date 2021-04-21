@@ -2,6 +2,9 @@
   "name": "learn-webpack-advanced",
   "version": "1.0.0",
   "description": "Learn Webpack Advanced",
+  "contributors": [
+    "toanleviet95@gmail.com"
+  ],
   "scripts": {
     "start": "webpack-dev-server --open --config ./webpack/webpack.dev.ts",
     "build": "webpack --config ./webpack/webpack.prod.ts",
